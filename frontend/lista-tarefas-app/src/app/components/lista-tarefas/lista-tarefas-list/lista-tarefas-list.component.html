@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header bg-dark text-light">
+        <h5>Listas de Tarefas</h5>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Acões</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let listaDeTarefas of list">
+                    <th scope="row">{{listaDeTarefas.id}}</th>
+                    <td>{{listaDeTarefas.nomeLista}}</td>
+                    <td>
+                        <a class="btn btn-info" [routerLink]="['/lista-tarefas-details',listaDeTarefas.id]">Detalhes</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div *ngIf="0 >= list.length">
+            <div class="card text-center">
+                <h6>Você não tem nenhuma lista.</h6>
+            </div>
+        </div>
+    </div>
+</div>

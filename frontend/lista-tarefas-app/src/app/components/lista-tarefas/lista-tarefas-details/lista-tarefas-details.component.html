@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-header bg-dark text-light">
+        <h5>{{listaDeTarefas.nomeLista}}</h5>
+        <div class="row">
+            <div class="col-lg-8 col-md6 col-sm12">
+                <a class="btn btn-success ml-2" [routerLink]="['/tarefa-add',listaDeTarefas.id]">Nova Tarefa</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Status</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Acões</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dados of tarefas">
+                    <td scope="row">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                               <input type="checkbox" [ngModel]="dados.status" (click)=updateStatus(dados.id)>
+                            </label>
+                        </div>
+                    </td>
+                    <td><s *ngIf="dados.status==true">{{dados.descricao}}</s><p *ngIf="dados.status==false">{{dados.descricao}}</p></td>
+                    <td>
+                        <a class="btn btn-danger" (click)=excluirTarefa(dados.id)>Excluir</a>
+                    </td>
+                </tr>
+            </tbody>   
+        </table>
+        <div *ngIf="0 >= tarefas.length">
+            <div class="card text-center">
+                <h6>Você não adicionou nenhuma tarefa ainda.</h6>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-header bg-dark text-light">
+    <h5>Cadastro de Lista de Tarefas</h5>
+  </div>
+  <div class="card-body">
+    <div class="submit-form">
+      <div>
+          <div class="form-group">
+            <form #listaTarefaForm="ngForm">
+              <div class="form-group">
+                  <label for="title">Descrição</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nomeLista"
+                    required
+                    [(ngModel)]="listaDeTarefas.nomeLista"
+                    name="nomeLista"
+                    required
+                  />
+                </div>
+                <button [disabled]="!listaTarefaForm.form.valid" (click)="saveListaTarefas()" class="btn btn-success">Cadastrar</button>
+              </form>
+          </div>
+      </div>
+  </div>
+  </div>
+</div>
