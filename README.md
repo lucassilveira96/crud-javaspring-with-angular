@@ -1,8 +1,8 @@
 # teste-accenture
-#teste utilizando Java Spring com Angular e Junit para testes.
-#Foram criadas duas Api uma utilizando a base de dados MySQL e outra utilizando H2.
+# teste utilizando Java Spring com Angular e Junit para testes.
+# Foram criadas duas Api uma utilizando a base de dados MySQL e outra utilizando H2.
 
-#Rotas Api:
+# Rotas Api:
 GET
 Pegar todas as Listas de Tarefas
   * localhost:8080/api/v1/listadetarefas
@@ -23,7 +23,7 @@ DELETE
 Deletar uma Lista de Tarefas
   * localhost:8080/api/v1/listadetarefas/id
 
-#Rotas Front:
+# Rotas Front:
 Adicionar uma nova lista de Tarefas
  * localhost:4200/lista-tarefas-add
 
