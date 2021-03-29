@@ -1,6 +1,6 @@
 # teste-accenture
-# teste utilizando Java Spring com Angular e Junit para testes.
-# Foram criadas duas Api uma utilizando a base de dados MySQL e outra utilizando H2.
+teste utilizando Java Spring com Angular e Junit para testes.
+Foram criadas duas Api uma utilizando a base de dados MySQL e outra utilizando H2.
 
 # Rotas Api:
 GET
